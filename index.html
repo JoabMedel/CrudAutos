@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <form id="form-user-edit" onsubmit="event.preventDefault(), addCar()" action="/users">
+                    <div class="form-group">
+                        <label for="name">Marca</label>
+                        <input type="text" class="form-control"  placeholder="Marca de auto" required id="marca">
+                    </div>
+                    <div class="form-group">
+                        <label for="edad">Modelo</label>
+                        <input type="text" class="form-control"  placeholder="Modelo" required id="modelo">
+                    </div>
+                    <div class="form-group">
+                        <label for="edad">Color</label>
+                        <input type="text" class="form-control"  placeholder="Color" required id="color">
+                    </div>
+                    <div class="form-group">
+                        <label for="edad">Año</label>
+                        <input type="number" class="form-control"  placeholder="Año" required id="año">
+                    </div>
+                    <div class="form-group">
+                        <label for="edad">Precio</label>
+                        <input type="text" class="form-control"  placeholder="$ 200,000.00..." required id="precio">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Agregar Auto</button>
+                </form>
+            </div>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Color</th>
+                    <th>Año</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody id="body-cars">
+                <!-- se genera de forma dinamica mi tabla -->
+            </tbody>
+        </table>
+    </div>
+    <script type="module" src="./crudAutos.js"></script>
+</body>
+</html>
